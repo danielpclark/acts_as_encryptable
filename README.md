@@ -1,6 +1,6 @@
 # ActsAsEncryptable
 [![Gem Version](https://badge.fury.io/rb/acts_as_encryptable.svg)](https://badge.fury.io/rb/acts_as_encryptable)
-[![Build Status](https://travis-ci.org/danielpclark/acts-as-messageable.svg?branch=master)](https://travis-ci.org/danielpclark/acts-as-messageable)
+[![Build Status](https://travis-ci.org/danielpclark/acts_as_encryptable.svg?branch=master)](https://travis-ci.org/danielpclark/acts_as_encryptable)
 
 This gem adds support with ActiveSupport's existing message encryption
 and allows you to set any ActiveRecord model column as an encrypted field.
