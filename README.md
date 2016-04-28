@@ -1,7 +1,9 @@
 # ActsAsEncryptable
+[![Gem Version](https://badge.fury.io/rb/acts_as_encryptable.svg)](https://badge.fury.io/rb/acts_as_encryptable)
+[![Build Status](https://travis-ci.org/danielpclark/acts-as-messageable.svg?branch=master)](https://travis-ci.org/danielpclark/acts-as-messageable)
 
-This gem add support for ActiveSupports existing message encryption feature
-and allows you to set any ActiveRecord model as an encrypted field.
+This gem adds support with ActiveSupport's existing message encryption
+and allows you to set any ActiveRecord model column as an encrypted field.
 
 
 ## Installation
@@ -12,9 +14,10 @@ Add this line to your application's Gemfile:
 gem 'acts_as_encryptable'
 ```
 
-And create an initializer file `config/initializers/acts_as_encryptable.rb`
+And create an initializer file:
 
 ```ruby
+# config/initializers/acts_as_encryptable.rb
 ActiveRecord::Base.extend ActsAsEncryptable
 ```
 
@@ -45,11 +48,11 @@ class Email < ActiveRecord::Base
 end
 ```
 
-If you're encrypting multiple fields you may choose to use to alter what keys
-and salts are used per column but this will add a performance hit for the extra
+If you're encrypting multiple fields you may choose to vary what keys and salts
+are used per column, but this will add a performance hit for the extra
 encryption startup time.
 
-If you want to perform additional work on record data that you want to encrypt
+If you want to perform additional work on record data that you want to encrypt;
 write a method alias after the `acts_as_encryptable` decleration and have your
 new method call it.  `acts_as_encryptable` should always be written before any
 method aliasing.
