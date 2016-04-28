@@ -5,6 +5,9 @@
 This gem adds support with ActiveSupport's existing message encryption
 and allows you to set any ActiveRecord model column as an encrypted field.
 
+It's bloat free and easy to use. This way you're up to date on security as
+long as Rails is. And there's no high maintenance or feature bloat like
+other "encryption helper gems" have 😉 .  It's fully tested too!
 
 ## Installation
 
