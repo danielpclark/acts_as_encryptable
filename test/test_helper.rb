@@ -8,8 +8,6 @@ require 'minitest/autorun'
 require 'color_pound_spec_reporter'
 require 'logger'
 
-#Ensure backward compatibility with Minitest 4
-Minitest::Test = MiniTest::Unit::TestCase unless defined?(Minitest::Test)
 Minitest::Reporters.use! [ColorPoundSpecReporter.new]
 
 ## This connection will do for database-independent bug reports.
