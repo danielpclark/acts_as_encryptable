@@ -8,7 +8,7 @@ module ActsAsEncryptable
       instance_variable_set(
         encryptor,
         ActiveSupport::MessageEncryptor.new(
-          ActiveSupport::KeyGenerator.new(send key).generate_key(send salt)
+          ActiveSupport::KeyGenerator.new(send key).generate_key(send(salt), 32)
         )
       ) unless instance_variable_defined? encryptor
 
@@ -22,7 +22,7 @@ module ActsAsEncryptable
       instance_variable_set(
         encryptor,
         ActiveSupport::MessageEncryptor.new(
-          ActiveSupport::KeyGenerator.new(send key).generate_key(send salt)
+          ActiveSupport::KeyGenerator.new(send key).generate_key(send(salt), 32)
         )
       ) unless instance_variable_defined? encryptor
 
